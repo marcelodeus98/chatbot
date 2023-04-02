@@ -1,0 +1,21 @@
+{
+    "questions": [
+        "hi",
+        "hello",
+        "howdy",
+        "good morning",
+        "good night",
+        "good afternoon",
+        "Greetings"
+    ],
+
+    "answers": [
+        "Hey there!",
+        "Hello!",
+        "Hi!",
+        "Good morning",
+        "Good night",
+        "Good afternoon",
+        "Greetings!"
+    ]
+}

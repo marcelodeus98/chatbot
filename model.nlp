@@ -1,0 +1,483 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "goodby": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "good,night": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "greet": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.bye": "default",
+          "greetings.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "good morning",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "good night",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "good afternoon",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Greetings",
+            "intent": "greetings.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "goodby": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "for": 1,
+              "now": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "hi": 1,
+              "hello": 1,
+              "howdi": 1,
+              "good": 1,
+              "morn": 1,
+              "night": 1,
+              "afternoon": 1,
+              "greet": 1
+            },
+            "intents": {
+              "greetings.bye": 1,
+              "greetings.hello": 1
+            },
+            "intentFeatures": {
+              "greetings.bye": {
+                "goodby": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "for": 1,
+                "now": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1
+              },
+              "greetings.hello": {
+                "hi": 1,
+                "hello": 1,
+                "howdi": 1,
+                "good": 1,
+                "morn": 1,
+                "night": 1,
+                "afternoon": 1,
+                "greet": 1
+              }
+            },
+            "featuresToIntent": {
+              "goodby": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye"
+              ],
+              "later": [
+                "greetings.bye"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "i": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye"
+              ],
+              "hi": [
+                "greetings.hello"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "howdi": [
+                "greetings.hello"
+              ],
+              "good": [
+                "greetings.hello"
+              ],
+              "morn": [
+                "greetings.hello"
+              ],
+              "night": [
+                "greetings.hello"
+              ],
+              "afternoon": [
+                "greetings.hello"
+              ],
+              "greet": [
+                "greetings.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "goodby",
+                "bye",
+                "take",
+                "care",
+                "see",
+                "you",
+                "later",
+                "for",
+                "now",
+                "i",
+                "must",
+                "go",
+                "hi",
+                "hello",
+                "howdi",
+                "good",
+                "morn",
+                "night",
+                "afternoon",
+                "greet"
+              ],
+              "intents": [
+                "greetings.bye",
+                "greetings.hello"
+              ],
+              "perceptrons": [
+                [
+                  10.560948371887207,
+                  5.41103458404541,
+                  2.7056283950805664,
+                  2.7056283950805664,
+                  3.607058048248291,
+                  3.607058048248291,
+                  3.607058048248291,
+                  2.7052111625671387,
+                  2.7052111625671387,
+                  3.606955051422119,
+                  3.606955051422119,
+                  3.606955051422119,
+                  -3.412605047225952,
+                  -3.3996660709381104,
+                  -3.386061668395996,
+                  -2.714142322540283,
+                  -0.9559831023216248,
+                  -0.8685874342918396,
+                  -0.8173602819442749,
+                  -3.36751651763916,
+                  3.4507577335880795
+                ],
+                [
+                  -7.349113941192627,
+                  -3.80085825920105,
+                  -1.9007303714752197,
+                  -1.9007303714752197,
+                  -2.5334315299987793,
+                  -2.5334315299987793,
+                  -2.5334315299987793,
+                  -1.8998196125030518,
+                  -1.8998196125030518,
+                  -2.533243179321289,
+                  -2.533243179321289,
+                  -2.533243179321289,
+                  6.617382526397705,
+                  6.6287665367126465,
+                  6.6095991134643555,
+                  5.006214618682861,
+                  1.6721872091293335,
+                  1.6691315174102783,
+                  1.6651841402053833,
+                  6.585078716278076,
+                  7.615132587866293
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye take care"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "good night"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "Greetings"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings.bye": [
+          {
+            "answer": "see you soon!"
+          },
+          {
+            "answer": "till next time!"
+          },
+          {
+            "answer": "bye bye!"
+          },
+          {
+            "answer": "have a greet day!"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": "Hey there!"
+          },
+          {
+            "answer": "Hello!"
+          },
+          {
+            "answer": "Hi!"
+          },
+          {
+            "answer": "Good morning"
+          },
+          {
+            "answer": "Good night"
+          },
+          {
+            "answer": "Good afternoon"
+          },
+          {
+            "answer": "Greetings!"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
